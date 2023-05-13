@@ -1,0 +1,123 @@
+<div>
+    {{#each program}}
+    <div>
+        <h1>{{name}}</h1>
+        <div> Місце проведення:
+            {{#with location}}
+            {{city}},
+            {{country}}
+            {{/with}}
+        </div>
+        <br>
+        <time> Час:
+            {{date}}
+        </time>
+        <br>
+        <br>
+        <div>
+            <h2>Програма:</h2>
+            <table width="100%">
+                {{#each program}}
+                <tbody>
+                    <th align="left">
+                        {{name}}
+                    </th>
+                    <td align="center"> {{type}} </td>
+                    <td align="center" width="100px">
+                        <p> Тривалість: <br> {{duration}} години</p>
+                    </td>
+                    <td>
+                        <div>
+                            {{#with details}}
+
+                            <div>
+                                {{#with museum}}
+
+                                <p>Місце: {{name}}</p>
+
+                                <div>
+                                    {{#with location}}
+                                    <address>
+                                        Адреса: {{address}}, {{city}}, {{country}}
+                                    </address>
+                                    {{/with}}
+                                </div>
+                                <hr>
+
+                                <div>Експонати:
+                                    {{#each exhibits}}
+                                    <ul>
+                                        {{#if name}}
+                                        <p>Назва: <em> {{name}}</em></p>
+                                        {{/if}}
+
+                                        {{#if artist}}
+                                        <p>Автор: <cite> {{artist}} </cite></p>
+                                        {{else}}
+                                        <p>Автор: <cite> Невідомий автор </cite></p>
+                                        {{/if}}
+
+                                        {{#if description}}
+                                        <p>Опис: <q> {{description}} </q></p>
+                                        {{/if}}
+
+                                        {{#if audio_guide}}
+                                        <button> Озвучка </button>
+                                        {{/if}}
+                                        <br>
+                                        <hr>
+                                    </ul>
+                                    {{/each}}
+                                </div>
+                                {{/with}}
+                            </div>
+
+                            <div>
+                                {{#with venue}}
+                                <p>Місце: {{name}}</p>
+
+                                <div>
+                                    {{#with location}}
+                                    <address>
+                                        Адреса: {{address}}, {{city}}, {{country}}
+                                    </address>
+                                    {{/with}}
+                                </div>
+                                <hr>
+                                {{/with}}
+                            </div>
+
+                            <div>
+                                {{#each performers}}
+                                <ul>
+                                    <p>Виконавець: {{name}}</p>
+                                    <p>Напрямок: {{type}}</p>
+                                    <hr>
+                                </ul>
+                                {{/each}}
+                            </div>
+                            <br>
+                            <div> Гід:
+                                {{#with guide}}
+
+                                {{name}},
+                                Мова: {{language}},
+                                Рейтинг: {{rating}}
+
+                                {{/with}}
+                            </div>
+                            <br>
+
+                            {{/with}}
+                        </div>
+
+                    </td>
+                </tbody>
+                {{/each}}
+                <hr>
+            </table>
+
+        </div>
+    </div>
+    {{/each}}
+</div>
