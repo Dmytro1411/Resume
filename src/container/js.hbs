@@ -1,0 +1,99 @@
+<div>
+    <header>
+        <div class="alert alert-dark" role="alert">
+            <h1 class="text">
+                <span class="badge bg-secondary">
+                    {{name}}
+                </span>
+            </h1>
+            {{#with history}}
+            <table width="550px" class="text">
+                <tr>
+                    <th> Засновник: {{founder}} </th>
+                    <th> Дата заснування: {{year}} рік </th>
+                </tr>
+            </table>
+            {{!-- <div role="rowgroup" width="550px" class="text">
+                <div role="row" aria-colindex="2">
+                    <span role="gridcell">
+                        Засновник: {{founder}}
+                    </span>
+
+                    <span role="gridcell">
+                        Дата заснування: {{year}} рік
+                    </span>
+                </div>
+            </div> --}}
+            {{/with}}
+        </div>
+    </header>
+    <main>
+        <div class="text-bg-success" role="alert">
+            Опис:
+            <q>{{description}}</q>
+        </div>
+        {{!-- <div class="vr" aria-colcount="5">
+            {{#each types}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div> --}}
+        <div class="hstack gap-1">
+            <div class="text"> Види:
+                <div class="alert alert-primary" role="alert">
+                    {{#each types}}
+                    <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            </div>
+            <div> Особливості:
+                <div class="alert alert-secondary" role="alert">
+                    {{#each features}}
+                    <span>{{this}},</span>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="text"> Синтаксис:
+                <div class="text-bg-danger" role="alert" class="p-2">
+                    {{#with syntax}}
+                    {{#each variables}} <p>{{this}} </p>{{/each}}
+                    {{#each functions}} <p>{{this}}</p> {{/each}}
+                    {{#each conditionals}} <p>{{this}}</p> {{/each}}
+                    {{#each loops}} <p>{{this}}</p> {{/each}}
+                    {{#each classes}} <p>{{this}}</p> {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+            <div> Бібліотеки:
+                <div class="alert alert-secondary" role="alert">
+                    {{#each libraries}}
+                    <span>{{this}},</span>
+                    {{/each}}
+                    <div class="p-2">
+                    </div>
+                </div>
+            </div>
+            <div> Інструменти:
+
+                <div class="alert alert-primary d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                        <use xlink:href="#info-fill" />
+                    </svg>
+                    {{#each tools}}
+                    <div>
+                        {{this}},
+                    </div>
+                    {{/each}}
+                    {{!-- <div class="alert alert-secondary" role="alert">
+                        {{#each tools}}
+                        <span>{{this}},</span>
+                        {{/each}}
+                        <div class="p-2">
+                        </div>
+                    </div> --}}
+
+                </div>
+
+            </div>
+    </main>
+
+</div>
