@@ -1,0 +1,187 @@
+<div>
+    <header>
+        <div class="alert alert-dark" role="alert">
+            <sup>{{category}}</sup>
+            <h1 class="text">
+                <span> {{name}} </span>
+            </h1>
+            <h5 align="center"> <q>{{description}}</q> </h5>
+        </div>
+    </header>
+    <main>
+        <div> Особливості:
+            <hr>
+        </div>
+        <div> Операційна система: {{operating_system}}</div>
+        {{#with features}}
+        <table>
+            <tr>
+                <td>
+                    <div class="alert alert-dark" role="alert">
+                        <ul class="list-group">
+                            <p> Процессор: </p>
+                            {{#with processor}}
+                            <li class="list-group-item"> Бренд:
+                                <b class="list-group-item" align="right"> {{brand}} </b>
+                            </li>
+                            <li class="list-group-item"> Модель:
+                                <b class="list-group-item" align="right"> {{model}} </b>
+                            </li>
+                            <li class="list-group-item"> Speed:
+                                <b class="list-group-item" align="right"> {{speed}} </b>
+                            </li>
+                            <li class="list-group-item"> Ядро:
+                                <b class="list-group-item" align="right"> {{cores}} </b>
+                            </li>
+                            <li class="list-group-item"> Cache:
+                                <b class="list-group-item" align="right"> {{cache}} </b>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <section>
+                        <div class="alert alert-dark" role="alert">
+                            <ul class="list-group">
+                                <p> Монітор: </p>
+                                {{#with display}}
+                                <li class="list-group-item"> Розмір:
+                                    <b class="list-group-item" align="right"> {{size}} </b>
+                                </li>
+                                <li class="list-group-item"> Роздільна здатність:
+                                    <b class="list-group-item" align="right"> {{resolution}} </b>
+                                </li>
+                                <li class="list-group-item"> Технологія:
+                                    <b class="list-group-item" align="right"> {{technology}} </b>
+                                </li>
+                                <li class="list-group-item"> Кольорова гамма:
+                                    <b class="list-group-item" align="right"> {{color_space}} </b>
+                                </li>
+                                <li class="list-group-item"> Яскравість:
+                                    <b class="list-group-item" align="right"> {{brightness}} </b>
+                                </li>
+                                <li class="list-group-item"> Частота:
+                                    <b class="list-group-item" align="right"> {{refresh_rate}} </b>
+                                </li>
+                                {{/with}}
+                            </ul>
+                        </div>
+                    </section>
+                </td>
+                <td>
+                    <div class="alert alert-dark" role="alert">
+                        <ul class="list-group">
+                            <b> Пам'ять </b>
+                            {{#with memory}}
+                            <li class="list-group-item"> Тип:
+                                <b class="list-group-item" align="right"> {{type}} </b>
+                            </li>
+                            <li class="list-group-item"> Розмір:
+                                <b class="list-group-item" align="right"> {{size}} </b>
+                            </li>
+                            <li class="list-group-item"> Speed:
+                                <b class="list-group-item" align="right"> {{speed}} </b>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="alert alert-dark" role="alert">
+                        <ul class="list-group">
+                            <b> Сховище </b>
+                            {{#with storage}}
+                            <li class="list-group-item"> Тип:
+                                <b class="list-group-item" align="right"> {{type}} </b>
+                            </li>
+                            <li class="list-group-item"> Розмір:
+                                <b class="list-group-item" align="right"> {{size}} </b>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <div class="alert alert-dark" role="alert">
+                        <ul class="list-group">
+                            <b> Графіка </b>
+                            {{#with graphics}}
+                            <li class="list-group-item"> Бренд:
+                                <b class="list-group-item" align="right"> {{brand}} </b>
+                            </li>
+                            <li class="list-group-item"> Модель:
+                                <b class="list-group-item" align="right"> {{model}} </b>
+                            </li>
+                            <li class="list-group-item"> Пам'ять:
+                                <b class="list-group-item" align="right"> {{memory}} </b>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="alert alert-dark" role="alert">
+                        <ul class="list-group">
+                            <b> Батарея </b>
+                            {{#with battery}}
+                            <li class="list-group-item"> Тип:
+                                <b class="list-group-item" align="right"> {{type}} </b>
+                            </li>
+                            <li class="list-group-item"> Ємність:
+                                <b class="list-group-item" align="right"> {{capacity}} </b>
+                            </li>
+                            <li class="list-group-item"> Час автономної праці:
+                                <b class="list-group-item" align="right"> {{life}} </b>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="alert alert-dark" role="alert">
+                        <ul class="list-group">
+                            <b> Розміри </b>
+                            {{#with dimensions}}
+                            <li class="list-group-item"> Висота:
+                                <b class="list-group-item" align="right"> {{height}} </b>
+                            </li>
+                            <li class="list-group-item"> Ширина:
+                                <b class="list-group-item" align="right"> {{width}} </b>
+                            </li>
+                            <li class="list-group-item"> Діагональ:
+                                <b class="list-group-item" align="right"> {{depth}} </b>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <div class="alert alert-dark" role="alert">
+                        <ul class="list-group">
+                            <b> Аксесуари </b>
+                            {{#each accessories}}
+                            <span class="list-group-item"> <em>{{name}}</em>
+                                <div align="right"> Ціна: {{price}}</div>
+                            </span>
+                            <hr>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+        <div>Вага: {{weight}}</div>
+        {{/with}}
+    </main>
+</div>
