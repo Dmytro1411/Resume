@@ -1,0 +1,132 @@
+<div>
+    <header>
+        <div class="alert alert-dark" role="alert">
+            <h1 class="text">
+                <span>
+                    Виробник: {{make}}
+                </span>
+            </h1>
+            <h2 align="center"><em>модель:</em> {{model}}</h2>
+            <picture>
+                <div>{{year}}</div>
+                <div align="left">{{color}}</div>
+                <source type="image/webp"
+                    srcset="https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/680x680/png/ua/product-token/c9cdbcc7-bcb1-46ce-aa00-7b040e5c8232/vehicle/5a215aa8-9492-459e-b2fe-27e27e405743/padding/50,50,50,50/image-quality/70/day-exterior-04_218.webp"
+                    class="container-fluid">
+                <img src="https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/680x680/zip/ua/product-token/c9cdbcc7-bcb1-46ce-aa00-7b040e5c8232/vehicle/5a215aa8-9492-459e-b2fe-27e27e405743/padding/50,50,50,50/image-quality/70/day-exterior-04_218.png"
+                    alt="Тойота Camry" class="container-fluid">
+            </picture>
+            <h4 class="model-title t-beta-text l-beta-text" align="center">СЕДАН БІЗНЕС-КЛАСУ</h4>
+        </div>
+    </header>
+    <section>
+        <p>Особливості:</p>
+        <table>
+            {{#with features}}
+            <tr>
+                <th>Інтерьер:</th>
+                {{#with interior}}
+                <td colspan="3"> Салон:
+                    <hr />
+                    {{#with seats}}
+                    <p> Матеріал: {{material}} </p>
+                    <p> Колір: {{color}} </p>
+                    <p>{{#if heated includeZero=true}} Обігрів {{/if}}</p>
+                    <p>{{#if ventilated includeZero=true}} Вентиляція {{/if}}</p>
+                    {{/with}}
+                </td>
+                {{/with}}
+            </tr>
+            <tr>
+                <th>Екстерьер:</th>
+                {{#with exterior}}
+                <td> Ходова:
+                    <hr>
+                    {{#with wheels}}
+                    <p> Розмір: {{size}} </p>
+                    <p> Колір: {{color}} </p>
+                    <p>Тип: {{type}}</p>
+                    {{/with}}
+                </td>
+                <td> Cвітло:
+                    <hr>
+                    {{#with headlights}}
+                    <p> Розмір: {{brightness}} </p>
+                    <p>Тип: {{type}}</p>
+                    <p>{{#if automatic includeZero=true}} (Автомат) {{/if}}</p>
+                    {{/with}}
+                </td>
+                <td> Люк:
+                    <hr>
+                    {{#with sunroof}}
+                    <p>Тип: {{type}}</p>
+                    <p> Розмір: {{size}} </p>
+                    <p>{{#if automatic includeZero=true}} (Автомат) {{/if}}</p>
+                    {{/with}}
+                </td>
+                {{/with}}
+            </tr>
+            <tr>
+                <th>Безпека:</th>
+                {{#with safety}}
+                <td> Airbags:
+                    <hr />
+                    {{#with airbags}}
+                    <p> front: {{front}} </p>
+                    <p> side: {{side}} </p>
+                    <p> knee: {{knee}} </p>
+                    <p> rear: {{rear}} </p>
+                    <p>{{#if heated includeZero=true}} Обігрів {{/if}}</p>
+                    <p>{{#if ventilated includeZero=true}} Вентиляція {{/if}}</p>
+                    {{/with}}
+                </td>
+                <td colspan="2"> Помічник:
+                    <hr />
+                    {{#with assistance}}
+                    <p>{{#if blind_spot_monitoring includeZero=true}} (Моніторинг сліпих зон) {{/if}}</p>
+                    <p>{{#if rear_cross_traffic_alert includeZero=true}} Попередження про поперечний рух ззаду {{/if}}
+                    </p>
+                    <p>{{#if lane_departure_warning includeZero=true}} Попередження про виїзд зі смуги руху {{/if}}</p>
+                    <p>{{#if adaptive_cruise_control includeZero=true}} Круїз-контроль {{/if}}</p>
+                    <p>{{#if collision_warning includeZero=true}} Попередження про зіткнення {{/if}}</p>
+                    {{/with}}
+                </td>
+                {{/with}}
+            </tr>
+            {{/with}}
+        </table>
+    </section>
+    <section>
+        <p>Витрата палива:</p>
+        {{#with fuel_economy}}
+
+        <button type="button" class="btn"> Міський цикл: {{city}}</button>
+
+        <button type="button" class="btn"> Траса: {{highway}}</button>
+
+        <button type="button" class="btn"> Комбінований: {{combined}}</button>
+
+        {{/with}}
+    </section>
+    <section>
+        <b>Price:</b>
+        {{#with price}}
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Базова комплектація: {{base}} </li>
+            <li class="list-group-item"> Призначення: {{destination}}</li>
+            <li class="list-group-item"> </li>
+            <details>
+                <summary>
+                    Опціі:
+                </summary>
+                {{#with options}}
+                <li class="list-group list-group-flush"> Навігатор: {{navigation}} </li>
+                <li class="list-group list-group-flush"> Люк в даху: {{moonroof}} </li>
+                <li class="list-group list-group-flush"> Окрас: {{premium_paint}} </li>
+                {{/with}}
+            </details>
+            <li class="list-group-item" align="right"> Всего: {{total}}</li>
+        </ul>
+        {{/with}}
+    </section>
+</div>
