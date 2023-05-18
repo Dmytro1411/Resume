@@ -1,0 +1,18 @@
+<span id="{{id}}">
+    <br id="{{id}}"> {{name}} ({{id}})
+    <br id="{{id}}"> Стать: {{gender}}
+    <div id="{{id}}"> Возраст: {{age}} </div>
+    {{#each groups}}
+    Групи <em id="{{id}}">{{../name}}</em>:
+    <br id="{{id}}">Назва: <b>"{{name}}"</b>
+    <br id="{{id}}">Опис: <q>{{description}}</q>
+    <b>
+        <li id="{{id}}"> Участники:
+            {{#each members}}
+            {{> span}}
+            {{/each}}
+        </li>
+    </b>
+    <hr />
+</span>
+{{/each}}
