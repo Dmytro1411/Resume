@@ -1,0 +1,83 @@
+<div>
+    <header>
+        <div class="alert alert-dark" role="alert">
+            <h1>
+                <em> {{name}} </em>
+            </h1>
+            <div>
+                {{#each users}}
+                {{> span}}
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse" aria-expanded="true" aria-controls="collapse">
+                                Друзі:
+                            </button>
+                        </h2>
+                        <div id="collapse" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                {{#each friends}}
+                                <div class="alert alert-dark" role="alert">
+                                    {{> span}} <br>
+                                    <em> <b>Спільні друзі:</b>
+                                        {{#each mutual_friends}}
+                                        {{> span}}
+                                        <br> {{/each}}
+                                    </em>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <br>
+                                Групи:
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                {{#each groups}}
+                                <div class="alert alert-dark" role="alert">
+                                    <span id="{{id}}">
+                                        <br> Назва: <em>{{name}}</em>
+                                        <br> Опис: <q>{{description}}</q>
+                                        <br> Члени:
+                                        <div>
+                                            {{#each members}}
+                                            <div class="alert alert-dark" role="alert">
+                                                {{> span}}
+                                                <ul>
+                                                    {{#each groups}}
+                                                    <li id="{{id}}">{{name}}</li>
+                                                    <li id="{{id}}">Опис: <q>{{description}}</q></li>
+                                                    <li id="{{id}}">
+                                                        {{#with members}}
+                                                        {{> span}}
+                                                        {{/with}}
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                            </div>
+                                            {{/each}}
+                                        </div>
+                                    </span>
+                                    <br>
+                                    <hr>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                {{/each}}
+            </div>
+        </div>
+    </header>
+</div>
