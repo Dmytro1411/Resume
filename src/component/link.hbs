@@ -1,10 +1,15 @@
-<a href="{{href}}" {{#if blank}} target="_blank" {{/if}}>{{text}}</a>
+{{!-- <a href="{{href}}" {{#if blank}} target="_blank" {{/if}}>{{text}}</a> --}}
+
+{{!-- <div class="btn btn-primary col-1 gx-5"> --}}
+    <a href="{{href}}" target="_blank" class="btn btn-light col-2 g-5"> {{text}} </a>
+    {{!--
+</div> --}}
 
 
-{{#unless noLine}}
+{{!-- {{#unless noLine}}
 {{#if line}}
 ---
 {{else}}
 /
 {{/if}}
-{{/unless}}
+{{/unless}} --}}
