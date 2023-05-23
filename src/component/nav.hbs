@@ -1,19 +1,20 @@
 <nav>
     {{!-- <a href="/skills">Skills</a> "Было" --}}
 
+    <div>
+        {{> link text="skills" href="/skills" line=true noLine=false}}
 
-    {{> link text="skills" href="/skills" line=true noLine=false}}
+        {{!-- <a href="/summary">Summary</a> "Было" --}}
+        {{> link text="summary" href="/summary" line=true noLine=false}}
 
-    {{!-- <a href="/summary">Summary</a> "Было" --}}
-    {{> link text="summary" href="/summary" line=true noLine=false}}
+        {{> link text="education" href="/education" line=true noLine=false}}
 
-    {{> link text="education" href="/education" line=true noLine=false}}
+        {{> link text="work" href="/work" line=true noLine=false}}
 
-    {{> link text="work" href="/work" line=true noLine=false}}
+        {{> link text="js" href="/js" line=true noLine=false}}
 
-    {{> link text="js" href="/js" line=true noLine=false}}
-
-    {{> link text="car" href="/car" line=true noLine=false}}
+        {{> link text="car" href="/car" line=true noLine=false}}
+    </div>
 
     <div>
         {{> link text="mac" href="/mac" line=true noLine=false}}
