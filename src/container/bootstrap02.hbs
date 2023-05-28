@@ -1,6 +1,6 @@
 <main class="p-5">
-    {{!-- <div class="row gy-5">
-        <section class="col-12">
+    <div class="row gy-5">
+        {{!-- <section class="col-12">
             <div class="card text-bg-dark">
                 <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
                 <div class="card-body">
@@ -13,7 +13,7 @@
                     <a class="btn btn-primary" href="/summary" target="_blank">Summary</a>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <section class="col-3">
             <div class="card">
                 <div class="card-header">
@@ -126,7 +126,7 @@
                 </div>
             </div>
         </section>
-    </div> --}}
+    </div>
 
     {{!-- <div class="card text-bg-dark">
         <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
@@ -458,9 +458,30 @@
                     <input name="food" type="radio" class="form-check-input">
                 </div>
             </div>
+            <div class="col-6">
+                <div class="form-check form-switch">
+                    <label class="form-check-label">Yes</label>
+                    <input name="food" type="checkbox" class="form-check-input">
+                </div>
+            </div>
         </div>
 
 
+    </div>
+    <label form="form_id">My Form</label>
+    <form id="form_id">
+        <label for="input_id">My Input</label>
+        <input id="input_id" />
+    </form>
+
+
+    <div class="col-12">
+        <label class="form-label">Select role</label>
+        <select class="form-select">
+            <option selected>Open</option>
+            <option value="1">Adam</option>
+            <option value="2">Eva</option>
+        </select>
     </div>
 
 
