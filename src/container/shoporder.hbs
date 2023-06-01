@@ -5,14 +5,7 @@
         <nav class="col-12 px-0 pt-4">
             <div class="card py-2 me-3">
                 {{#with navigation}}
-                <div class="nav">
-                    {{#each links}}
-                    <div class="nav-item">
-                        <a class="nav-link py-0 {{#if @last includeZero=true}} disabled {{/if}}"
-                            href="{{href}}">{{text}}</a>
-                    </div>
-                    {{/each}}
-                </div>
+                {{> links}}
                 {{/with}}
             </div>
         </nav>

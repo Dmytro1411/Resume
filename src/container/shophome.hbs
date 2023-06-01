@@ -44,7 +44,8 @@
         <div class="nav nav-tabs">
             {{#each tabs}}
             <div class="nav-item mx-1 px-1">
-                <a class="nav-link {{#if isActive}} active {{else}} {{#unless isDisabled}} disabled {{/unless}} {{/if}} href="
+                <a class="nav-link {{#if isActive}} active {{else}} {{#unless isDisabled}} disabled {{/unless}} {{/if}}"
+                    href="
                     #"> {{text}}</a>
             </div>
             {{/each}}
