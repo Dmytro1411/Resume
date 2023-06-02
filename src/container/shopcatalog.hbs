@@ -1,0 +1,83 @@
+<main>
+    <div class="row mx-4">
+        <div class="col-12">
+            <nav class="pt-4 mb-4">
+                <div class="card">
+                    {{#with navigation}}
+                    {{> links}}
+                    {{/with}}
+                </div>
+            </nav>
+
+            <br>
+
+            <div class="nav mt-4 mb-3">
+                {{#each breadcrumb}}
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item mx-2">
+                            {{#if @last}}
+                            <a class="disabled tab" href="{{url}}">{{name}}</a>
+                            {{else}}
+                            <a class="tab" href="{{url}}">{{name}}</a> /
+                            {{/if}}
+                        </li>
+                    </ol>
+                </nav>
+                {{/each}}
+            </div>
+
+            <h1>{{header}}</h1>
+
+            <div class="row mt-4 mb-5">
+                {{#each sortBlock}}
+                <div class="col-3">
+                    <select class="form-select my-0">
+                        <option selected>{{placeholder}}</option>
+                        {{#each options}}
+                        <option>{{value}} {{text}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                {{/each}}
+            </div>
+
+            <menu>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            {{#with filterBlock}}
+                            {{#with sellers}}
+                            <div>{{title}}</div>
+
+
+                            {{/with}}
+
+                            {{/with}}
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </menu>
+
+
+
+
+
+
+            {{> bottom}}
+
+            <hr class="my-5">
+
+            {{> footer02}}
+
+
+        </div>
+
+
+    </div>
+
+
+</main>
