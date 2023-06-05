@@ -1011,6 +1011,21 @@ module.exports = router
 
 // Підключаємо роутер до бек-енду
 
+router.get('/bootstrapOld', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrapOld', {
+    layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+module.exports = router
+
+// ================================================================
+
+// Підключаємо роутер до бек-енду
+
 router.get('/bootstrap02', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -2999,3 +3014,107 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+
+router.get('/index8', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'shop',
+    author: {
+      firstname: 'Dmytro',
+      lastname: 'Bukur',
+    },
+    project: {
+      name: 'Resume project',
+    },
+    service: {
+      title: 'Cписок сторінок',
+      description:
+        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
+      buttons: [
+        {
+          text: 'Summary',
+          href: '/summary',
+        },
+        {
+          text: 'Skills',
+          href: '/skills',
+        },
+        {
+          text: 'Bio',
+          href: '/bio',
+        },
+        {
+          text: 'Bootstrap',
+          href: '/bootstrapOld',
+        },
+        {
+          text: 'Car',
+          href: '/car',
+        },
+        {
+          text: 'Education',
+          href: '/education',
+        },
+        {
+          text: 'Facebook',
+          href: '/facebook',
+        },
+        {
+          text: 'Js',
+          href: '/js',
+        },
+        {
+          text: 'Mac',
+          href: '/mac',
+        },
+        {
+          text: 'Person',
+          href: '/person',
+        },
+        {
+          text: 'Program',
+          href: '/program',
+        },
+        {
+          text: 'Shopcart',
+          href: '/shopcart',
+        },
+        {
+          text: 'Shopcatalog',
+          href: '/shopcatalog',
+        },
+        {
+          text: 'Shophome',
+          href: '/shophome',
+        },
+        {
+          text: 'Shoporder',
+          href: '/shoporder',
+        },
+        {
+          text: 'Shopreview',
+          href: '/shopreview',
+        },
+        {
+          text: 'Task21',
+          href: '/task21',
+        },
+        {
+          text: 'Task22',
+          href: '/task22',
+        },
+        {
+          text: 'Task31',
+          href: '/task31',
+        },
+        {
+          text: 'Work',
+          href: '/work',
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
