@@ -1,0 +1,39 @@
+<main class="g-3">
+    <div class="col-12">
+        <div class="card mt-5 mx-5 p-3">
+            <div class="row">
+                <div class="col-6">
+                    {{#with author}}
+                    <em>{{firstname}} {{lastname}}</em>
+                    {{/with}}
+                </div>
+                <div class="col-6 text-end">
+                    {{#with project}}
+                    <em style="background: rgb(211, 208, 208);">{{name}}</em>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#with service}}
+    <div class="col-12">
+        <div class="mt-5 mx-5">
+            <div class="row">
+                <div class="col-3">
+                    <h2 class="mt-3 mb-4"> <em style="background: lightgray;">{{title}}</em> </h2>
+                </div>
+                <q class="mb-5">{{description}}</q>
+                {{#each buttons}}
+                <div class="my-2">
+                    <button class="btn btn-primary col-2">
+                        <div class="nav-item">
+                            <a class="nav-link" href="{{href}}" target="_blank">{{text}}</a>
+                        </div>
+                    </button>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/with}}
+</main>
